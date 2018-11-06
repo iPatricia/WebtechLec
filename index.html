@@ -7,31 +7,33 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>ClickHERE</title>
   </head>
-  <body>
-	  <nav class="navbar navbar navbar-dark bg-dark">
-		<div class="navbar-brand">
-		  <a class="navbar-brand">ClickHERE</a>
-			<ul class="navbar-nav">
-				<li class="topnav">
-					<a class="nav-link" href="">Home</a>
-				</li>
-				<li class="topnav">
-					<a class="nav-link" href="">Movie Schedule</a>
-				</li>
-				<li class="topnav">
-					<a class="nav-link" href="">Top Movies</a>
-				</li>
-				<li class="topnav">
-					<a class="nav-link" href="">Upcoming Movies</a>
-				</li>
-			</ul>
-			<form class="form-inline">
-				<input class="form-inline mr-2" placeholder="Search" type="search">
-				<button type="button" class="btn btn-light">Search</button>	
-			</form>  
-		  </div>
-	  </nav> 
+ <body>
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+         <li> <a href=""> ClickHERE </a></li>
+         <li> <a href="#Home"> Home </a></li>
+         <li> <a href="#movieschedule"> Movie Schedule </a></li>
+         <li> <a href="#topmovies"> Top Movies </a></li>
+         <li> <a href="#upcomingmovies"> Upcoming Movies </a></li>
+         <li class="search-container"> 			
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit">Submit</button>
+        </li> 
 
+        <li class="dropdown"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+        </ul>    
+    </nav>
+
+    <script>
+     function dropdownMenu(){
+         var x = document.getElementById("dropdownClick");
+         if (x.className === "topnav"){
+             x.className += " responsize";
+         }else{
+             x.className = "topnav";
+         }  
+     } 
+    </script>
 	  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	  
 	</body>
