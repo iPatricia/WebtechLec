@@ -38,6 +38,8 @@
 				<li v-for="item in items.results">
 					<img :src="imageUrl + item.poster_path" alt="">
 					<div class="item_list">
+						<h3>{{ item.original_title }}</h3>
+						<p>{{ item.overview }}</p>
 					</div>
 				</li>
 			</ul>
