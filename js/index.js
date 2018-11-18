@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', evt => {
 })
 
 document.addEventListener('DOMContentLoaded', evt => {
-  const topratedApp = new Vue({
-    el: "#toprated",
+  const topmoviesApp = new Vue({
+    el: "#topmovies",
     data: {
       items: [],
       baseUrl: 'https://api.themoviedb.org/3',
