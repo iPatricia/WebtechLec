@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', evt => {
         .then(res => this.genres = res.body.genres)
       this.fetchData();
     },
+	
+	methods: {
+      fetchData: function fetchData() {
+        var _this = this;
+        this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey + '&sort_by=popularity.desc').then(function (response) {
+          console.log(response.body)
+          _this.items = response.body;
+          _this.movie = false;
+        });
+      },
+    }
 
   });
 })
@@ -38,6 +49,16 @@ document.addEventListener('DOMContentLoaded', evt => {
         .then(res => this.genres = res.body.genres)
       this.fetchData();
     },
+	methods: {
+      fetchData: function fetchData() {
+        var _this = this;
+        this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey + '&sort_by=vote_count.desc').then(function (response) {
+		console.log(response.body)
+        _this.items = response.body;
+        _this.movie = false;
+        });
+      },
+    }
 
   });
 })
@@ -60,7 +81,16 @@ document.addEventListener('DOMContentLoaded', evt => {
         .then(res => this.genres = res.body.genres)
       this.fetchData();
     },
-
+    methods: {
+      fetchData: function fetchData() {
+        var _this = this;
+        this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey + '&sort_by=release_date.desc').then(function (response) {
+		console.log(response.body)
+        _this.items = response.body;
+        _this.movie = false;
+        });
+      },
+    }
   });
 })
 
