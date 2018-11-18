@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', evt => {
       }
     }
   });
-	document.getElementById('searchForm').addEventListener('submit', function(evt) {
+	
+document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
     homeApp.searchMovie(document.getElementById('searchInput').value)
   })
