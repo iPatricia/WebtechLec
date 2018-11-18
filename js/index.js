@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', evt => {
   });
   document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
-    homeApp.searchMovie(document.getElementById('searchInput').value)
+    topratedApp.searchMovie(document.getElementById('searchInput').value)
   })
 })
 
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', evt => {
   });
   document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
-    homeApp.searchMovie(document.getElementById('searchInput').value)
+    upcomingApp.searchMovie(document.getElementById('searchInput').value)
   })
 })
 
