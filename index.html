@@ -40,6 +40,11 @@
 					<div class="item_list">
 						<h3>{{ item.original_title }}</h3>
 						<p>{{ item.overview }}</p>
+                        <p>Rating: {{ item.vote_average }}</p>
+            			<p>Genres: <span v-for="(genreId, i) in item.genre_ids" :key="genreId">
+                		{{ genres.find(g => g.id === genreId).name }}
+                		<span v-if="i !== item.genre_ids.length">,</span>
+            			</span></p>
 					</div>
 				</li>
 			</ul>
