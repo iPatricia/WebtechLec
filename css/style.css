@@ -1,9 +1,26 @@
-body{
-    
-}
-
 li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
-   
+.container ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 26vw;
+  position: relative;
+  overflow: hidden;
+  background: inherit;
+  padding: 30px;
+  margin-bottom: 50;
+}
+.container ul li:hover .item_list {
+  opacity: 1;
+  margin-top: 5px;
+  padding: inherit;
+  width: 25vw;
+}
+
+.container ul li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
