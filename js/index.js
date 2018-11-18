@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', evt => {
       this.$http.get(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}&language=en-US`)
         .then(res => this.genres = res.body.genres)
       this.fetchData();
-    },
-	
+    },	
 	methods: {
       fetchData: function fetchData() {
         var _this = this;
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', evt => {
           })
       }
     }
-
   });
 	document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
@@ -78,7 +76,7 @@ document.addEventListener('DOMContentLoaded', evt => {
   });
   document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
-    topratedApp.searchMovie(document.getElementById('searchInput').value)
+    topmoviesApp.searchMovie(document.getElementById('searchInput').value)
   })
 })
 
