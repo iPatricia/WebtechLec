@@ -26,9 +26,19 @@ document.addEventListener('DOMContentLoaded', evt => {
           _this.movie = false;
         });
       },
+	  searchMovie (query) {
+        this.$http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false&query=${query}`)
+          .then(res => {
+            this.items = res.body
+          })
+      }
     }
 
   });
+	document.getElementById('searchForm').addEventListener('submit', function(evt) {
+    evt.preventDefault()
+    homeApp.searchMovie(document.getElementById('searchInput').value)
+  })
 })
 
 document.addEventListener('DOMContentLoaded', evt => {
@@ -58,9 +68,18 @@ document.addEventListener('DOMContentLoaded', evt => {
         _this.movie = false;
         });
       },
+	  searchMovie (query) {
+        this.$http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false&query=${query}`)
+          .then(res => {
+            this.items = res.body
+          })
+      }
     }
-
   });
+  document.getElementById('searchForm').addEventListener('submit', function(evt) {
+    evt.preventDefault()
+    homeApp.searchMovie(document.getElementById('searchInput').value)
+  })
 })
 
 document.addEventListener('DOMContentLoaded', evt => {
@@ -90,8 +109,18 @@ document.addEventListener('DOMContentLoaded', evt => {
         _this.movie = false;
         });
       },
+	  searchMovie (query) {
+        this.$http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false&query=${query}`)
+          .then(res => {
+            this.items = res.body
+          })
+      }
     }
   });
+  document.getElementById('searchForm').addEventListener('submit', function(evt) {
+    evt.preventDefault()
+    homeApp.searchMovie(document.getElementById('searchInput').value)
+  })
 })
 
 new Vue({
