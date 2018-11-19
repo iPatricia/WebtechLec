@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', evt => {
       movie: true,
       genres: [],
       keyword: null
-    }, //declaration of components 
+    }, //declaration of components *Ferrer
     
     created: function created() {
       this.$http.get(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}&language=en-US`)
         .then(res => this.genres = res.body.genres)
-      this.fetchData(); //fetch genre of the movie
+      this.fetchData(); //fetch genre of the movie *Ferrer
     },	
 	methods: {
       fetchData: function fetchData() {
@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', evt => {
         this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey + '&sort_by=popularity.desc').then(function (response) {
           console.log(response.body)
           _this.items = response.body;
-          _this.movie = false;  //fetch movie according to popularoty
+          _this.movie = false;  //fetch movie according to popularity *Lansangan
         });
       },
 	  searchMovie (query) {
         this.$http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false&query=${query}`)
           .then(res => {
-            this.items = res.body //request for movie search
+            this.items = res.body //request for movie search *Vinluan
           })
       }
     }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', evt => {
 	
 document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
-    homeApp.searchMovie(document.getElementById('searchInput').value) //gather search input 
+    homeApp.searchMovie(document.getElementById('searchInput').value) //gather search input *Vinluan
   })
 })
 
@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', evt => {
       movie: true,
       genres: [],
       keyword: null
-    }, //declaration of components
+    }, //declaration of components *Ferrer
   
     created: function created() {
       this.$http.get(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}&language=en-US`)
         .then(res => this.genres = res.body.genres)
-      this.fetchData(); //fetch genre of the movie
+      this.fetchData(); //fetch genre of the movie *Ferrer
     },
 	methods: {
       fetchData: function fetchData() {
@@ -64,20 +64,20 @@ document.addEventListener('DOMContentLoaded', evt => {
         this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey + '&sort_by=vote_count.desc').then(function (response) {
 		console.log(response.body)
         _this.items = response.body;
-        _this.movie = false; //fetch movie according to rating
+        _this.movie = false; //fetch movie according to rating *Lansangan
         }); 
       },
 	  searchMovie (query) {
         this.$http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false&query=${query}`)
           .then(res => {
-            this.items = res.body //request for movie search
+            this.items = res.body //request for movie search *Vinluan
           }) 
       }
     }
   });
   document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
-    topmoviesApp.searchMovie(document.getElementById('searchInput').value) //gather search input
+    topmoviesApp.searchMovie(document.getElementById('searchInput').value) //gather search input *Vinluan
   }) 
 })
 
@@ -92,12 +92,12 @@ document.addEventListener('DOMContentLoaded', evt => {
       movie: true,
       genres: [],
       keyword: null
-    }, //declaration of components
+    }, //declaration of components *Ferrer
   
     created: function created() {
       this.$http.get(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}&language=en-US`)
         .then(res => this.genres = res.body.genres)
-      this.fetchData(); //fetch genre of the movie
+      this.fetchData(); //fetch genre of the movie *Ferrer
     },
     methods: {
       fetchData: function fetchData() {
@@ -105,20 +105,20 @@ document.addEventListener('DOMContentLoaded', evt => {
         this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey + '&sort_by=release_date.desc').then(function (response) {
 		console.log(response.body)
         _this.items = response.body;
-        _this.movie = false; //fetch movie according to release date
+        _this.movie = false; //fetch movie according to release date *Lansangan
         });
       },
 	  searchMovie (query) {
         this.$http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false&query=${query}`)
           .then(res => {
-            this.items = res.body //request for movie search
+            this.items = res.body //request for movie search *Vinluan
           })
       }
     }
   });
   document.getElementById('searchForm').addEventListener('submit', function(evt) {
     evt.preventDefault()
-    upcomingApp.searchMovie(document.getElementById('searchInput').value) //gather search input
+    upcomingApp.searchMovie(document.getElementById('searchInput').value) //gather search input *Vinluan
   })
 })
 
@@ -130,17 +130,17 @@ new Vue({
     apiKey: '84809cc489047f96f78d2178f63792ef',
     imageUrl: 'https://image.tmdb.orgP/t/p/w342',
     loaded: true
-  }, //declaration of components
+  }, //declaration of components *Ferrer
 
   created: function created() {
-    this.fetchData() //container for gathered data
+    this.fetchData() //container for gathered data *Ferrer 
   },
   methods: {
     fetchData: function fetchData() {
       var _this = this;
       this.$http.get(this.baseUrl + '/discover/movie?api_key=' + this.apiKey).then(function (response) {
         _this.items = response.body;
-        _this.loaded = false; //method for fetching genre of the movie
+        _this.loaded = false; //method for fetching genre of the movie *Ferrer
       })
     }
   }
