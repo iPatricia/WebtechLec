@@ -35,6 +35,7 @@ li a:hover:not(.active) {
 }
 /* Tuguinay */
 
+/* Hilarion */
 .item_list {
   position: absolute;
   bottom: 0;
@@ -42,7 +43,7 @@ li a:hover:not(.active) {
   padding: 20px;
   overflow: hidden;
   height: 100%;
-  width: 100%;
+  width: 400px;
   overflow-y: scroll;
   opacity: 0;
 
@@ -81,4 +82,52 @@ li a:hover:not(.active) {
   content: "";
   border-radius: 100px;
 }
+
+
+
+@media(max-width: 1825px){
+  .movies-section ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    position: relative;
+    overflow: hidden;
+    background: inherit;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+  }
+}
+
+
+
+@media(max-width: 1380px){
+  .movies-section ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    background: inherit;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+  }
+}
+
+@media(max-width: 935px){
+  .movies-section ul li {;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: inherit;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    margin: auto
+  }
+}
+
 
