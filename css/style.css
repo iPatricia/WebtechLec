@@ -1,29 +1,40 @@
+/* Tuguinay */
 li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
-.container ul li {
+.movies-section {
+  width: 90%;
+  margin: auto;
+}
+
+.movies-section ul li {
   display: inline-block;
   vertical-align: top;
-  width: 26vw;
+  width: 400px;
   position: relative;
   overflow: hidden;
   background: inherit;
   padding: 30px;
-  margin-bottom: 50;
+  margin-bottom: 50px;
+  box-sizing: border-box;
 }
-.container ul li:hover .item_list {
+.movies-section ul li:hover .item_list {
+  text-align: center;
   opacity: 1;
   margin-top: 5px;
   padding: inherit;
-  width: 25vw;
+  width: 400px;
 }
 
-.container ul li img {
+.movies-section ul li img {
+  max-width: 338px;
   width: 100%;
   height: auto;
   display: block;
 }
+/* Tuguinay */
+
 .item_list {
   position: absolute;
   bottom: 0;
